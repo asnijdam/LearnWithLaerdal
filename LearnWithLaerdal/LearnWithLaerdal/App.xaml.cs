@@ -1,8 +1,4 @@
-﻿using LearnWithLaerdal.Services;
-using LearnWithLaerdal.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace LearnWithLaerdal
 {
@@ -12,8 +8,6 @@ namespace LearnWithLaerdal
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
