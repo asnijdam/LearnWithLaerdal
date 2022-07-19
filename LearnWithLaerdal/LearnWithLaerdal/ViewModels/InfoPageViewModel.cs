@@ -5,12 +5,12 @@ using Xamarin.Forms;
 
 namespace LearnWithLaerdal.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class InfoPageViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public InfoPageViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://laerdal.com/"));
         }
 
         public ICommand OpenWebCommand { get; }

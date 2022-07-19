@@ -1,21 +1,25 @@
-﻿using LearnWithLaerdal.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace LearnWithLaerdal.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class InfoPage : ContentPage
     {
-        public LoginPage()
+        public InfoPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+        }
+
+        async void MainB_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StartGame()); 
         }
     }
 }

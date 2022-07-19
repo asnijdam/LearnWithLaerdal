@@ -1,9 +1,9 @@
-﻿using LearnWithLaerdal.Models;
-using LearnWithLaerdal.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using LearnWithLaerdal.Models;
+using LearnWithLaerdal.Services;
 using Xamarin.Forms;
 
 namespace LearnWithLaerdal.ViewModels
