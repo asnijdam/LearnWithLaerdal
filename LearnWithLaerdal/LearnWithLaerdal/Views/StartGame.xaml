@@ -1,12 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LearnWithLaerdal.Views.StartGame">
-    <ContentPage.Content>
+             x:Class="LearnWithLaerdal.Views.StartGame"
+             xmlns:vm="clr-namespace:LearnWithLaerdal.ViewModels"
+             x:DataType="vm:StartGameViewModel"
+             xmlns:FontAwesome="clr-namespace:FontAwesome"
+             xmlns:helpers="LeaernWithLaerdal.Helpers"
+             BackgroundColor="#276D8B"
+            >
+    <ContentPage.BindingContext>
+        <vm:StartGameViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
         <StackLayout>
-            <Label Text="Game Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{x:Static FontAwesome:FontAwesomeIcons.CircleNotch}" 
+                   FontFamily="FAS"
+                   x:Name="LabelLoad"
+                   FontSize="80"
+                   HorizontalOptions="Center"
+                   TextColor="White"/>
+            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                <Image Source="SimJunior.png" VerticalOptions="Center" HeightRequest="64" />
+            </ContentView>
+            <Label Text="Connecting to your Sim..."
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="Small"/>
+            <Button Text="Animate"
+                Command="{Binding RefreshLongCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

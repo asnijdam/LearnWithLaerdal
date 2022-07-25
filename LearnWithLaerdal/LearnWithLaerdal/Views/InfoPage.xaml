@@ -4,6 +4,8 @@
              x:Class="LearnWithLaerdal.Views.InfoPage"
              xmlns:vm="clr-namespace:LearnWithLaerdal.ViewModels"
              Title="{Binding Title}">
+    
+    
     <ContentPage.BindingContext>
         <vm:InfoPageViewModel />
     </ContentPage.BindingContext>
@@ -28,7 +30,8 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Halloen!" FontSize="Title"/>
+                <Label Text="Halloen!"
+                       FontSize="Title"/>
                 <Label FontSize="16" Padding="0,0,0,0">
                     <Label.FormattedText>
                         <FormattedString>

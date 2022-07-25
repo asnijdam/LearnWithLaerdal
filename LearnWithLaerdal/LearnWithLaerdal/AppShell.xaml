@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:LearnWithLaerdal.Views"
+       xmlns:FontAwesome="clr-namespace:FontAwesome"
        Title="LearnWithLaerdal"
        x:Class="LearnWithLaerdal.AppShell">
 
@@ -82,6 +83,19 @@
         <ShellContent Route="InfoPage" ContentTemplate="{DataTemplate local:InfoPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Learn With Laerdal">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FAS"
+                             Glyph="{StaticResource gamepad}"
+                             Color="Black"/>
+        </FlyoutItem.Icon>
+        <ShellContent Route="StartGame" ContentTemplate="{DataTemplate local:StartGame}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Your Sims">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FAS"
+                             Glyph="{x:Static FontAwesome:FontAwesomeIcons.Person}"
+                             Color="Black"/>
+        </FlyoutItem.Icon>
         <ShellContent Route="StartGame" ContentTemplate="{DataTemplate local:StartGame}" />
     </FlyoutItem>
 
